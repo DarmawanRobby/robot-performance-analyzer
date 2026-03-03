@@ -1,32 +1,70 @@
 {
   "name": "robot-performance-analyzer",
   "displayName": "Robot Performance Analyzer",
-  "description": "Performance & Bottleneck Analyzer for Robot Framework",
+  "description": "Advanced performance profiler, bottleneck detector, and output analyzer for Robot Framework automation projects.",
   "version": "1.0.0",
-  "publisher": "yourpublishername",
-  "engines": { "vscode": "^1.85.0" },
-  "categories": ["Other"],
-  "activationEvents": [
-    "onLanguage:robot",
-    "onCommand:robotAnalyzer.analyzeFile",
-    "onCommand:robotAnalyzer.openDashboard",
-    "onCommand:robotAnalyzer.openOutput"
+  "publisher": "robbydarmawan",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Testing",
+    "Other"
   ],
+  "keywords": [
+    "robot framework",
+    "automation testing",
+    "appium",
+    "performance",
+    "bottleneck",
+    "qa",
+    "sdet",
+    "output.xml"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DarmawanRobby/robot-performance-analyzer.git"
+  },
+  "homepage": "https://github.com/DarmawanRobby/robot-performance-analyzer#readme",
+  "bugs": {
+    "url": "https://github.com/DarmawanRobby/robot-performance-analyzer/issues"
+  },
+  "icon": "media/icon.png",
+  "activationEvents": [],
+  "main": "./out/extension.js",
   "contributes": {
     "commands": [
-      { "command": "robotAnalyzer.analyzeFile", "title": "Robot: Analyze Current File" },
-      { "command": "robotAnalyzer.openDashboard", "title": "Robot: Open Performance Dashboard" },
-      { "command": "robotAnalyzer.openOutput", "title": "Robot: Open Output Viewer" }
+      {
+        "command": "robotAnalyzer.analyzeFile",
+        "title": "Robot: Analyze Current File"
+      },
+      {
+        "command": "robotAnalyzer.openDashboard",
+        "title": "Robot: Open Performance Dashboard"
+      },
+      {
+        "command": "robotAnalyzer.openOutput",
+        "title": "Robot: Open Output Viewer"
+      }
+    ],
+    "languages": [
+      {
+        "id": "robot",
+        "aliases": ["Robot Framework", "robot"],
+        "extensions": [".robot"]
+      }
     ]
   },
-  "main": "./out/extension.js",
   "scripts": {
     "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
     "vscode:prepublish": "npm run compile"
   },
   "devDependencies": {
+    "@types/node": "^18.19.0",
     "@types/vscode": "^1.85.0",
-    "typescript": "^5.3.0"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "fast-xml-parser": "^4.3.5"
