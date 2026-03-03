@@ -12,7 +12,7 @@ Robot Performance Analyzer is a tool designed to analyze and optimize the perfor
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/robot-performance-analyzer.git
+   git clone https://github.com/DarmawanRobby/robot-performance-analyzer.git
    ```
 2. Navigate to the project directory:
    ```bash
